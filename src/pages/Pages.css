@@ -1,0 +1,145 @@
+
+.dashboard-page,
+.placeholder-page {
+  width: 100%;
+}
+
+.cycle-card,
+.stat-card,
+.welcome-card {
+  border: 1px solid var(--dashboard-border);
+  border-radius: var(--border-radius);
+  background: var(--dashboard-card-bg);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.025);
+}
+
+.cycle-card {
+  margin-bottom: 20px;
+}
+
+.cycle-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cycle-label {
+  margin-bottom: 8px;
+  color: #7b8495;
+  font-size: 12px;
+}
+
+.cycle-title {
+  color: var(--dashboard-text);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.cycle-description {
+  margin-top: 8px;
+  color: #7b8495;
+  font-size: 13px;
+}
+
+.statistics-row {
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  height: 100%;
+}
+
+.stat-card .ant-card-body {
+  padding: 22px;
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-title {
+  color: #667085;
+  font-size: 13px;
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.stat-value {
+  margin-top: 20px;
+  color: var(--dashboard-text);
+  font-size: 27px;
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.stat-description {
+  margin-top: 10px;
+  color: var(--dashboard-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.welcome-card {
+  margin-top: 20px;
+}
+
+.welcome-card .ant-card-head {
+  min-height: 56px;
+  border-bottom-color: #f0f2f5;
+}
+
+.welcome-card .ant-card-head-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.welcome-card p {
+  margin: 0 0 12px;
+  color: #667085;
+  line-height: 1.8;
+}
+
+.welcome-card p:last-child {
+  margin-bottom: 0;
+}
+
+.placeholder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 32px;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+
+  .cycle-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stat-card .ant-card-body {
+    padding: 18px;
+  }
+
+  .stat-value {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,576 @@
+.admin-layout {
+  /* min-height: 100vh; */
+  height: 100vh;
+  /* 修改：固定为屏幕高度 */
+  height: 100dvh;
+  /* 新增：适配动态视口高度 */
+  overflow: hidden;
+  /* 新增：禁止整个页面滚动 */
+  background: #f5f7fb;
+}
+
+.admin-sider {
+  position: fixed !important;
+  inset: 0 auto 0 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff !important;
+  border-right: 1px solid #edf0f5;
+  transition: width 0.2s ease;
+}
+
+.admin-sider .ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* min-height: 72px; */
+  height: 64px;
+  min-height: 64px;
+  flex-shrink: 0;
+  padding: 0 18px;
+  border-bottom: 1px solid #f0f2f5;
+  overflow: hidden;
+}
+
+.brand-logo {
+  display: flex;
+  flex: 0 0 38px;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #fff;
+  background: #245bdb;
+  font-size: 22px;
+}
+
+.brand-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.brand-name {
+  color: #172033;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+  color: #98a2b3;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.brand-pro {
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: #245bdb;
+  background: #edf2ff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.sidebar-menu {
+  flex: 1;
+  min-height: 0;
+  padding: 16px 10px;
+  overflow-y: auto;
+}
+
+.sidebar-menu .ant-menu {
+  border-inline-end: none !important;
+  background: transparent;
+}
+
+.sidebar-menu .ant-menu-item-group-title {
+  padding: 14px 12px 8px;
+  color: #98a2b3;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sidebar-menu .ant-menu-item {
+  margin: 3px 0;
+  width: 100%;
+}
+
+.sidebar-menu .ant-menu-item .ant-menu-item-icon {
+  font-size: 17px;
+}
+
+.sidebar-footer {
+  padding: 12px 10px;
+  border-top: 1px solid #edf0f5;
+}
+
+.sidebar-footer .ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  color: #667085;
+}
+
+.sidebar-version {
+  padding: 8px 12px 2px;
+  color: #a0a8b6;
+  font-size: 11px;
+}
+
+.admin-main {
+  min-width: 0;
+
+  /* 修改：主布局固定为屏幕高度 */
+  height: 100vh;
+  height: 100dvh;
+
+  /* 新增：允许 flex 子元素正确计算剩余高度 */
+  min-height: 0;
+
+  /* 新增：禁止主布局整体滚动 */
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 248px;
+  transition: margin-left 0.2s ease;
+}
+
+.admin-header {
+
+  position: relative;
+  z-index: 90;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px;
+  min-height: 64px;
+  flex-shrink: 0;
+  flex: 0 0 64px;
+
+  padding: 0 28px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #edf0f5;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.header-left {
+  gap: 16px;
+}
+
+.header-right {
+  gap: 18px;
+}
+
+.collapse-button,
+.header-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #667085;
+  font-size: 17px;
+}
+
+.header-divider {
+  width: 1px;
+  height: 22px;
+  background: #e9edf3;
+}
+
+.enterprise-select {
+  width: 174px;
+}
+
+.enterprise-select .ant-select-selector {
+  border: none !important;
+  background: #f6f8fc !important;
+  box-shadow: none !important;
+}
+
+.header-search {
+  width: 220px;
+  border-color: #edf0f5;
+  background: #f8f9fc;
+}
+
+.header-search .ant-input {
+  background: transparent;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.user-name {
+  color: #263247;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.user-role {
+  color: #98a2b3;
+  font-size: 11px;
+}
+
+.user-arrow {
+  margin-left: 2px;
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+.admin-content {
+  min-width: 0;
+
+  /* 新增：占据 Header 和 Footer 之间的剩余空间 */
+  flex: 1 1 0;
+
+  /* 关键：允许内容区域缩小 */
+  min-height: 0;
+
+  /* 新增：中间区域独立滚动 */
+  overflow-y: auto;
+  overflow-x: auto;
+
+  padding: 28px;
+  background: #f5f7fb;
+
+  /* 调试完成后建议删除原来的棕色边框 */
+  /* border: solid 1px saddlebrown; */
+
+  box-sizing: border-box;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .admin-header {
+    padding: 0 18px;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  .header-search {
+    width: 180px;
+  }
+
+  .admin-content {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .enterprise-select,
+  .header-search,
+  .user-info,
+  .user-arrow,
+  .user-divider {
+    display: none;
+  }
+
+  .admin-header {
+    padding: 0 14px;
+  }
+
+  .header-left {
+    gap: 10px;
+  }
+
+  .admin-content {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .header-left .ant-breadcrumb {
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+}
+
+
+
+
+/* =========================
+   暗黑模式：全局基础色
+   ========================= */
+
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  color-scheme: dark;
+  background: #14161a;
+}
+
+html[data-theme="dark"] .admin-layout {
+  background: #14161a;
+}
+
+/* =========================
+   左侧侧边栏
+   ========================= */
+
+html[data-theme="dark"] .admin-sider {
+  background: #1b1e24 !important;
+  border-right-color: #30343d;
+}
+
+html[data-theme="dark"] .brand {
+  border-bottom-color: #30343d;
+}
+
+html[data-theme="dark"] .brand-name {
+  color: #f0f2f5;
+}
+
+html[data-theme="dark"] .brand-subtitle {
+  color: #8b93a3;
+}
+
+html[data-theme="dark"] .brand-pro {
+  color: #91b4ff;
+  background: #25365c;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu {
+  color: #c5cad3;
+  background: transparent;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu-item-group-title {
+  color: #8b93a3;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu-item {
+  color: #c5cad3;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu-item:hover {
+  color: #ffffff;
+  background: #292e38;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu-item-selected {
+  color: #91b4ff;
+  background: #25365c;
+}
+
+html[data-theme="dark"] .sidebar-menu .ant-menu-item-selected::after {
+  border-right-color: #6d95ff;
+}
+
+html[data-theme="dark"] .sidebar-footer {
+  border-top-color: #30343d;
+}
+
+html[data-theme="dark"] .sidebar-footer .ant-btn {
+  color: #b4bbc8;
+}
+
+html[data-theme="dark"] .sidebar-footer .ant-btn:hover {
+  color: #ffffff;
+  background: #292e38;
+}
+
+html[data-theme="dark"] .sidebar-version {
+  color: #7f8898;
+}
+
+/* =========================
+   右侧顶部导航栏
+   ========================= */
+
+html[data-theme="dark"] .admin-header {
+  color: #e5e7eb;
+  background: rgba(27, 30, 36, 0.96);
+  border-bottom-color: #30343d;
+}
+
+html[data-theme="dark"] .header-divider {
+  background: #383d47;
+}
+
+html[data-theme="dark"] .header-left .ant-breadcrumb,
+html[data-theme="dark"] .header-left .ant-breadcrumb a {
+  color: #aeb6c4;
+}
+
+html[data-theme="dark"] .header-left .ant-breadcrumb li:last-child {
+  color: #f0f2f5;
+}
+
+html[data-theme="dark"] .collapse-button,
+html[data-theme="dark"] .header-icon-button {
+  color: #b4bbc8;
+}
+
+html[data-theme="dark"] .collapse-button:hover,
+html[data-theme="dark"] .header-icon-button:hover {
+  color: #ffffff;
+  background: #30343d;
+}
+
+html[data-theme="dark"] .user-name {
+  color: #f0f2f5;
+}
+
+html[data-theme="dark"] .user-role,
+html[data-theme="dark"] .user-arrow {
+  color: #8b93a3;
+}
+
+/* =========================
+   右侧页面内容
+   ========================= */
+
+html[data-theme="dark"] .admin-content {
+  color: #e5e7eb;
+  background: #14161a;
+}
+
+/* Ant Design 卡片 */
+html[data-theme="dark"] .admin-content .ant-card {
+  color: #e5e7eb;
+  background: #1b1e24;
+  border-color: #30343d;
+}
+
+html[data-theme="dark"] .admin-content .ant-card-head {
+  color: #f0f2f5;
+  border-bottom-color: #30343d;
+}
+
+html[data-theme="dark"] .admin-content .ant-card-head-title,
+html[data-theme="dark"] .admin-content .ant-card-extra {
+  color: #f0f2f5;
+}
+
+html[data-theme="dark"] .admin-content .ant-card-body {
+  color: #c5cad3;
+}
+
+/* 页面内表格 */
+html[data-theme="dark"] .admin-content .ant-table {
+  color: #e5e7eb;
+  background: #1b1e24;
+}
+
+html[data-theme="dark"] .admin-content .ant-table-thead>tr>th {
+  color: #c5cad3;
+  background: #242830;
+  border-bottom-color: #383d47;
+}
+
+html[data-theme="dark"] .admin-content .ant-table-tbody>tr>td {
+  border-bottom-color: #30343d;
+}
+
+html[data-theme="dark"] .admin-content .ant-table-tbody>tr:hover>td {
+  background: #292e38;
+}
+
+/* 输入框、选择器 */
+html[data-theme="dark"] .admin-content .ant-input,
+html[data-theme="dark"] .admin-content .ant-input-affix-wrapper,
+html[data-theme="dark"] .admin-content .ant-select-selector {
+  color: #e5e7eb;
+  background: #242830;
+  border-color: #383d47;
+}
+
+html[data-theme="dark"] .admin-content .ant-input::placeholder {
+  color: #7f8898;
+}
+
+/* 页面内分割线 */
+html[data-theme="dark"] .admin-content .ant-divider {
+  border-color: #30343d;
+}
+
+/* 下拉菜单、通知等挂载到 body 的弹层 */
+html[data-theme="dark"] .ant-dropdown .ant-dropdown-menu,
+html[data-theme="dark"] .ant-dropdown .ant-dropdown-menu-sub {
+  color: #e5e7eb;
+  background: #242830;
+}
+
+html[data-theme="dark"] .ant-dropdown .ant-dropdown-menu-item {
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .ant-dropdown .ant-dropdown-menu-item:hover {
+  background: #343a46;
+}
+
+/* 主题切换按钮 */
+.theme-toggle-button {
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* 新增：底部 Footer 始终显示 */
+.admin-footer {
+  flex: 0 0 auto;
+  padding: 12px 24px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #fff;
+  border-top: 1px solid #edf0f5;
+}
+
+/* 暗黑模式适配 */
+html[data-theme="dark"] .admin-footer {
+  color: #c5cad3;
+  background: #1b1e24;
+  border-top-color: #30343d;
+}
